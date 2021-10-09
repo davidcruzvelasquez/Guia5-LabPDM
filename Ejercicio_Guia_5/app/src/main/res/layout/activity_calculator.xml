@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#161A23"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvOperacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="5dp"
+            android:text="123 + 456 ="
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvResultado"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="32dp"
+            android:text="579"
+            android:textColor="#4CAF50"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:id="@+id/tr1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:backgroundTint="#282e3b"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="v"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#282e3b"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="AC"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#282e3b"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="DEL"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#282e3b"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="÷"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tr2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tr1">
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:backgroundTint="#323a4e"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="("
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#323a4e"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text=")"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#323a4e"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="%"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#282e3b"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="×"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tr3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tr2">
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:backgroundTint="#323a4e"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="7"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#323a4e"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="8"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#323a4e"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="9"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#282e3b"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="-"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tr4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tr3">
+
+            <Button
+                android:id="@+id/btn13"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:backgroundTint="#323a4e"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="4"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#323a4e"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="5"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#323a4e"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="6"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#282e3b"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="+"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+        </TableRow>
+
+        <LinearLayout
+            android:id="@+id/ll5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tr4"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:id="@+id/ll1tr1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn17"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#323a4e"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        android:text="1"
+                        android:textAllCaps="false"
+                        android:textSize="24sp"
+                        app:cornerRadius="0dp"
+                        app:strokeColor="#161A23"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/btn18"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#323a4e"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        android:text="2"
+                        android:textAllCaps="false"
+                        android:textSize="24sp"
+                        app:cornerRadius="0dp"
+                        app:strokeColor="#161A23"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/btn19"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#323a4e"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        android:text="3"
+                        android:textAllCaps="false"
+                        android:textSize="24sp"
+                        app:cornerRadius="0dp"
+                        app:strokeColor="#161A23"
+                        app:strokeWidth="1dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/ll1tr2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn20"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#323a4e"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textSize="24sp"
+                        app:cornerRadius="0dp"
+                        app:strokeColor="#161A23"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/btn21"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#323a4e"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        android:text="00"
+                        android:textAllCaps="false"
+                        android:textSize="24sp"
+                        app:cornerRadius="0dp"
+                        app:strokeColor="#161A23"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/btn22"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="#323a4e"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        android:text="."
+                        android:textAllCaps="false"
+                        android:textSize="24sp"
+                        app:cornerRadius="0dp"
+                        app:strokeColor="#161A23"
+                        app:strokeWidth="1dp" />
+
+                </TableRow>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:backgroundTint="#4CAF50"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="="
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                app:cornerRadius="0dp"
+                app:strokeColor="#161A23"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
